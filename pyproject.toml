@@ -2,7 +2,9 @@
 name = "timeconv"
 version = "0.1.0"
 description = "Convert hours, minutes, and seconds"
-authors = ["Wan Naim Zuhair <wnzuhair@gmail.com>"]
+authors = [
+    {name = "Wan Naim Zuhair", email = "wnzuhair@gmail.com"}
+]
 license = "MIT"
 readme = "README.md"
 requires-python = ">=3.10"
