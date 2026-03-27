@@ -5,7 +5,7 @@ def second_to_hour(second):
     print(round(second/3600, 5), "hour(s).")
 
 def minute_to_hour(minute):
-    print(round(minute/60, 5), "minute(s).")
+    print(round(minute/60, 5), "hour(s).")
 
 def minute_to_second(minute):
     print(round(minute*60, 5), "second(s).")
