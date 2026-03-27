@@ -1,17 +1,17 @@
 def second_to_minute(second):
-    return round(second/60, 5)
+    print(round(second/60, 5), "minute(s).")
 
 def second_to_hour(second):
-    return round(second/3600, 5)
+    print(round(second/3600, 5), "hour(s).")
 
 def minute_to_hour(minute):
-    return round(minute/60, 5)
+    print(round(minute/60, 5), "minute(s).")
 
 def minute_to_second(minute):
-    return round(minute*60, 5)
+    print(round(minute*60, 5), "second(s).")
 
 def hour_to_minute(hour):
-    return round(hour*60, 5)
+    print(round(hour*60, 5), "minute(s).")
 
 def hour_to_second(hour):
-    return round(hour*3600, 5)
+    print(round(hour*3600, 5), "second(s).")
