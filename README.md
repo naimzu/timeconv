@@ -21,7 +21,6 @@ Clone the repository
 ```bash
 git clone https://github.com/naimzu/timeconv.git
 cd timeconv
-python -m pip install -e .
 ```
 # Usage
 
