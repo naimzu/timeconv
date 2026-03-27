@@ -21,11 +21,12 @@ Clone the repository
 ```bash
 git clone https://github.com/naimzu/timeconv.git
 cd timeconv
+python -m pip install -e .
 ```
 # Usage
 
 ```python
-from timeconv import second_to_minute, hour_to_second
+from timeconv import second_to_minute, hour_to_second, minute_to_hour
 
 second_to_minute(90)   # 1.5
 hour_to_second(2)      # 7200
