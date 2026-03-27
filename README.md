@@ -15,14 +15,14 @@ This package provides the following conversions:
 
 All results are rounded to 5 decimal places.
 
-#Installation
+# Installation
 
 Clone the repository
 ```bash
 git clone https://github.com/naimzu/timeconv.git
 cd timeconv
 ```
-#Usage
+# Usage
 
 ```python
 from timeconv import second_to_minute, hour_to_second
