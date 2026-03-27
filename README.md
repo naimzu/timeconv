@@ -28,7 +28,7 @@ python -m pip install -e .
 ```python
 from timeconv import second_to_minute, hour_to_second
 
-print(second_to_minute(90))   # 1.5
-print(hour_to_second(2))      # 7200
-print(minute_to_hour(1))       # 0.01667
+second_to_minute(90)   # 1.5
+hour_to_second(2)      # 7200
+minute_to_hour(1)      # 0.01667
 ```
