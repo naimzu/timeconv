@@ -7,38 +7,42 @@ from timeconv import (
     hour_to_second,
 )
 
+def test_second_to_minute_under_60(capsys):
+    second_to_minute(45.678)
+    captured = capsys.readouterr()
+    assert captured.out == "45.68 second(s)\n"
 
-def test_second_to_minute():
-    assert second_to_minute(120) == 2.0
-    assert second_to_minute(90) == 1.5
-    assert second_to_minute(1) == 0.01667
+def test_second_to_minute_over_60(capsys):
+    second_to_minute(125)
+    captured = capsys.readouterr()
+    assert captured.out == "2 minute(s) : 5 second(s)\n"
 
+def test_second_to_hour_days(capsys):
+    second_to_hour(90061)
+    captured = capsys.readouterr()
+    assert captured.out == "1 day(s) : 1 hour(s) : 1 minute(s) : 1 second(s)\n"
 
-def test_second_to_hour():
-    assert second_to_hour(3600) == 1.0
-    assert second_to_hour(1800) == 0.5
-    assert second_to_hour(1) == 0.00028
+def test_second_to_hour_hours(capsys):
+    second_to_hour(3661)
+    captured = capsys.readouterr()
+    assert captured.out == "1 hour(s) : 1 minute(s) : 1 second(s)\n"
 
+def test_minute_to_hour_days(capsys):
+    minute_to_hour(1500)
+    captured = capsys.readouterr()
+    assert captured.out == "1 day(s) : 1 hour(s) : 0 minute(s)\n"
 
-def test_minute_to_hour():
-    assert minute_to_hour(60) == 1.0
-    assert minute_to_hour(30) == 0.5
-    assert minute_to_hour(1) == 0.01667
+def test_minute_to_second(capsys):
+    minute_to_second(1.5)
+    captured = capsys.readouterr()
+    assert captured.out == "90.0 second(s).\n"
 
+def test_hour_to_minute(capsys):
+    hour_to_minute(2)
+    captured = capsys.readouterr()
+    assert captured.out == "120 minute(s).\n"
 
-def test_minute_to_second():
-    assert minute_to_second(1) == 60
-    assert minute_to_second(2.5) == 150.0
-    assert minute_to_second(0.1) == 6.0
-
-
-def test_hour_to_minute():
-    assert hour_to_minute(1) == 60
-    assert hour_to_minute(2.5) == 150.0
-    assert hour_to_minute(0.5) == 30.0
-
-
-def test_hour_to_second():
-    assert hour_to_second(1) == 3600
-    assert hour_to_second(2) == 7200
-    assert hour_to_second(0.5) == 1800.0
+def test_hour_to_second(capsys):
+    hour_to_second(1.25)
+    captured = capsys.readouterr()
+    assert captured.out == "4500.0 second(s).\n"

@@ -1,19 +1,26 @@
 # timeconv
 
-A simple Python package to convert between hours, minutes, and seconds.
+A simple Python package for converting between seconds, minutes, hours, and days.
 
 ## Features
 
 This package provides the following conversions:
 
-- seconds to minutes
-- seconds to hours
-- minutes to hours
+- seconds to minutes and seconds
+- seconds to hours, minutes, and seconds
+- seconds to days, hours, minutes, and seconds
+- minutes to hours and minutes
+- minutes to days, hours, and minutes
 - minutes to seconds
 - hours to minutes
 - hours to seconds
 
-All results are rounded to 5 decimal places.
+## Notes
+
+- Some functions display results in a breakdown format, such as hours, minutes, and seconds.
+- Decimal values are rounded in the printed output.
+- The package currently prints the conversion result directly instead of returning it.
+
 
 # Installation
 
@@ -23,12 +30,14 @@ git clone https://github.com/naimzu/timeconv.git
 cd timeconv
 python -m pip install -e .
 ```
-# Usage
+## Example
 
 ```python
-from timeconv import second_to_minute, hour_to_second, minute_to_hour
+from timeconv import second_to_hour, minute_to_second
 
-second_to_minute(90)   # 1.5
-hour_to_second(2)      # 7200
-minute_to_hour(1)      # 0.01667
+second_to_hour(3661)
+# 1 hour(s) : 1 minute(s) : 1 second(s)
+
+minute_to_second(1.5)
+# 90.0 second(s).
 ```
