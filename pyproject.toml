@@ -1,6 +1,6 @@
 [project]
 name = "timeconv"
-version = "0.1.0"
+version = "0.2.0"
 description = "Convert hours, minutes, and seconds"
 authors = [
     {name = "Wan Naim Zuhair", email = "wnzuhair@gmail.com"}
